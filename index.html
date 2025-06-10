@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÍconGen</title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <img src="/logo.png" alt="Logo do Gerador de Ícones" class="logo">
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="techInput">Tecnologias:</label>
+                <input type="text" id="techInput" placeholder="Ex: javascript,html css python java react">
+            </div>
+            <button onclick="generateIcons()">Gerar Ícones</button>
+        </div>
+
+        <div id="loadingIndicator" class="progress-indicator">
+            <div class="progress-bar"></div>
+        </div>
+        <div id="iconContainer" class="preview">
+        </div>
+
+        <div id="notFoundMessage" class="not-found-message"></div>
+
+        <button id="downloadButton" onclick="downloadIconsZip()">Download</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
